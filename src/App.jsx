@@ -27,7 +27,7 @@ function App() {
       description: inputValue,
       completed: false,
       hidden: false,
-      dueDate: "2025-11-29",
+      dueDate: new Date().toISOString().split("T")[0],
     };
     setTodos([...todos, newTodo]);
     setinputValue("");
@@ -55,7 +55,10 @@ function App() {
   };
   return (
     <div className="max-w-xl mx-auto px-4">
-      <h1 className="text-center text-3xl md:text-5xl m-8">Todo List</h1>
+      <h1 className="text-center text-3xl md:text-5xl m-8">
+        <span className="text-blue-950 bold text-6xl md:text-8xl">π</span>Todo
+        List
+      </h1>
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center border border-gray-900 rounded px-3 py-2 flex-grow">
